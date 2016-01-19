@@ -4,10 +4,8 @@ import java.util.List;
 
 import jeffersonschmitt.github.com.helloword.domain.User;
 
-/**
- * Created by Mitt on 18/01/2016.
- */
-public interface IUser {
+
+public interface IUserRepository {
     List<User> get();
     User getByUserId(int usuario);
     void add(User user);

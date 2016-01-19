@@ -6,11 +6,11 @@ import com.activeandroid.query.Select;
 import java.util.List;
 
 
+import jeffersonschmitt.github.com.helloword.contracts.IUserRepository;
 import jeffersonschmitt.github.com.helloword.domain.User;
-import jeffersonschmitt.github.com.helloword.contracts.IUser;
 
 
-public class UserRepository implements IUser {
+public class UserRepository implements IUserRepository {
     @Override
     public List<User> get() {
         return new Select().from(User.class).execute();
