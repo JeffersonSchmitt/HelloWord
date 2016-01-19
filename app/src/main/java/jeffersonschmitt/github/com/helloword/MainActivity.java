@@ -1,25 +1,38 @@
 package jeffersonschmitt.github.com.helloword;
 
-import android.app.AlertDialog;
+import android.app.Activity;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.support.annotation.UiThread;
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
+import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.ViewById;
+import org.w3c.dom.Text;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
-
-    public void clickEntrar(View view){
-        AlertDialog alertDialog;
-        alertDialog= new AlertDialog.Builder(this).create();
-        alertDialog.setTitle("Logado com sucesso");
-        alertDialog.setMessage("Voce entrou com a sua conta");
-        alertDialog.show();
-    }
+import jeffersonschmitt.github.com.helloword.business.UserServices;
+import jeffersonschmitt.github.com.helloword.contracts.IUser;
+import jeffersonschmitt.github.com.helloword.contracts.IUserService;
 
 
+@EActivity(R.layout.activity_main)
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
+public class MainActivity extends Activity {
+
+    @ViewById
+    EditText usuario;
+    @ViewById
+    EditText senha;
+    @ViewById Button entrar;
+
+    IUserService userService;
+
+
+    @AfterViews void init(){
+      userService = new UserServices(); //erro aqui...
+
+   }
+
 }
