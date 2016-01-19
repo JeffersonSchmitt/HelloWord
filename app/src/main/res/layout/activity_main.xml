@@ -20,16 +20,22 @@
  <EditText
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="20dp"
-    android:hint="Senha"
+     android:hint="Senha"
     android:id="@+id/senha"
-    />
+     android:layout_below="@+id/nome"
+     android:layout_alignRight="@+id/nome"
+     android:layout_alignEnd="@+id/nome"
+     android:layout_alignLeft="@+id/nome"
+     android:layout_alignStart="@+id/nome" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Entrar"
         android:id="@+id/entrar"
-        />
+        android:layout_below="@+id/nome"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="46dp" />
 
 
 </RelativeLayout>

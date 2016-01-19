@@ -13,8 +13,8 @@ import org.w3c.dom.Text;
 import android.support.v7.app.AppCompatActivity;
 
 import jeffersonschmitt.github.com.helloword.business.UserServices;
-import jeffersonschmitt.github.com.helloword.contracts.IUser;
 import jeffersonschmitt.github.com.helloword.contracts.IUserService;
+import jeffersonschmitt.github.com.helloword.domain.User;
 
 
 @EActivity(R.layout.activity_main)
@@ -31,8 +31,11 @@ public class MainActivity extends Activity {
 
 
     @AfterViews void init(){
-      userService = new UserServices(); //erro aqui...
-
+      userService = new UserServices();
    }
-
+    @Click void add(){
+        String usuarioUser= usuario.getText().toString();
+        String senhaUser= senha.getText().toString();
+        User user= new User(usuario,senha); // problema aqui.
+    }
 }
