@@ -10,44 +10,25 @@
     tools:context="jeffersonschmitt.github.com.helloword.MainActivity"
     android:touchscreenBlocksFocus="false">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="numberPassword"
-        android:ems="10"
-        android:id="@+id/editText"
-        android:layout_marginTop="166dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Sua ID"
-        android:id="@+id/textView"
-        android:layout_alignBottom="@+id/editText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="67dp" />
-
+ <EditText
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_margin="20dp"
+     android:hint="Nome"
+     android:id="@+id/nome"
+     />
+ <EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:hint="Senha"
+    android:id="@+id/senha"
+    />
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Entrar"
-        android:id="@+id/button"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="clickEntrar" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nao tem uma conta?"
-        android:id="@+id/button2"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:singleLine="false"
-        android:textStyle="normal"
+        android:id="@+id/entrar"
         />
 
 
