@@ -27,12 +27,12 @@ public class UserServices implements IUserService {
         this.changeSenha(senha);
     }
     @Override
-    public void create(int usuario, User user) {
+    public void create(User user) {
         _userRepository.add(user);
     }
 
     @Override
-    public void remove(int usuario) {
+    public void remove(String usuario) {
         _userRepository.delete(usuario);
     }
 }

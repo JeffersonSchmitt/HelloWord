@@ -8,6 +8,6 @@ public interface IUserService {
     List<User> get();
     User getByUser(int usuario);
     void changeSenha(String senha);
-    void create (int usuario, User user);
-    void remove(int usuario);
+    void create (User user);
+    void remove(String usuario);
 }

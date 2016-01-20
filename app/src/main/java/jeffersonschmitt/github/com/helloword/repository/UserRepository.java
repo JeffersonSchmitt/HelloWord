@@ -32,7 +32,7 @@ public class UserRepository implements IUserRepository {
     }
 
     @Override
-    public void delete(int usuario) {
+    public void delete(String usuario) {
         new Delete().from(User.class).where("usuario=?", usuario).executeSingle();
     }
 }
