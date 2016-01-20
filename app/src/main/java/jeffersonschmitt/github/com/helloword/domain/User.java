@@ -10,11 +10,8 @@ public class User extends Model {
 
   @Column(name="usuario") String usuario;
   @Column(name="senha") String senha;
-
-  private String usuario;
-  private String senha;
-  private double saldo;
-  private String cpf;
+  @Column(name="saldo") double saldo;
+  @Column(name="cpf") String cpf;
 
 
   public User() {
